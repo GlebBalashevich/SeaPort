@@ -20,7 +20,7 @@ public class Main {
         shipList.add(new Ship("Olha", 4, 0, Ship.TripTask.LOAD_CARGO));
         shipList.add(new Ship("Iren", 3, 3, Ship.TripTask.DELIVER_CARGO));
 
-        for(Ship ship : shipList){
+        for (Ship ship : shipList) {
             new Thread(ship).start();
         }
     }

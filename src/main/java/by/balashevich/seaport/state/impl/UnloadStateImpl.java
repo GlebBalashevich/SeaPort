@@ -14,7 +14,7 @@ public class UnloadStateImpl implements ShipState {
             ship.nextState(new LeavingPortStateImpl());
             logger.log(Level.INFO, ship.getName() + " delivered cargo");
         }
-        if(ship.getTripTask() == Ship.TripTask.DELIVER_AND_LOAD){
+        if (ship.getTripTask() == Ship.TripTask.DELIVER_AND_LOAD) {
             ship.nextState(new UploadStateImpl());
             logger.log(Level.INFO, ship.getName() + " delivered, start to load cargo");
         }

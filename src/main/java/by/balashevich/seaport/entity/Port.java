@@ -61,7 +61,7 @@ public class Port {
     public void leaveDock(String shipName) {
         dockLock.lock();
         Dock releasingDock = surrenderedDocks.poll();
-        if (releasingDock != null){
+        if (releasingDock != null) {
             freeDocks.offer(releasingDock);
             logger.log(Level.INFO, shipName + " left " + releasingDock);
         } else {
